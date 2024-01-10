@@ -9,7 +9,7 @@ public class SciencesDepartment extends Student {
     public SciencesDepartment() {
     }
 
-    public SciencesDepartment(int id, String name, int age, String sex, String major, double mathPoint, double chemistryPoint, double physicsPoint) {
+    public SciencesDepartment(String id, String name, int age, String sex, String major, double mathPoint, double chemistryPoint, double physicsPoint) {
         super(id, name, age, sex, major);
         this.mathPoint = mathPoint;
         this.chemistryPoint = chemistryPoint;

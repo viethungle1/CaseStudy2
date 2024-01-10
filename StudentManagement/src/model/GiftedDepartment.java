@@ -7,7 +7,7 @@ public class GiftedDepartment extends Student {
     private double shapingPoint;
     public GiftedDepartment() {
     }
-    public GiftedDepartment(int id, String name, int age, String sex, String major, double artPoint, double sculpturePoint, double shapingPoint) {
+    public GiftedDepartment(String id, String name, int age, String sex, String major, double artPoint, double sculpturePoint, double shapingPoint) {
         super(id, name, age, sex, major);
         this.artPoint = artPoint;
         this.sculpturePoint = sculpturePoint;

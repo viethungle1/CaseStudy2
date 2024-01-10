@@ -3,14 +3,14 @@ package model;
 import java.io.Serializable;
 
 public abstract class Student implements Rank, Evaluate, Serializable {
-    private int id;
+    private String id;
     private String name;
     private int age;
     private String sex;
     private String major;
     public Student() {
     }
-    public Student(int id, String name, int age, String sex, String major) {
+    public Student(String id, String name, int age, String sex, String major) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -23,10 +23,10 @@ public abstract class Student implements Rank, Evaluate, Serializable {
     public void setSex(String sex) {
         this.sex = sex;
     }
-    public int getId() {
+    public String getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getName() {

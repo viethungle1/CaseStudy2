@@ -7,7 +7,7 @@ public class SocialDepartment extends Student {
     private double geographyPoint;
     public SocialDepartment() {
     }
-    public SocialDepartment(int id, String name, int age, String sex, String major, double literaturePoint, double historyPoint, double geographyPoint) {
+    public SocialDepartment(String id, String name, int age, String sex, String major, double literaturePoint, double historyPoint, double geographyPoint) {
         super(id, name, age, sex, major);
         this.literaturePoint = literaturePoint;
         this.historyPoint = historyPoint;

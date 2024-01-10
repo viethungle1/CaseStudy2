@@ -2,7 +2,7 @@ package model;
 
 import controller.AdminController;
 
-public class StudentFactory {
+public class Studentt {
     public static Student getAnimal(String type) {
         if ("gifted".equals(type)) {
             System.out.println("Nhập thành công");
