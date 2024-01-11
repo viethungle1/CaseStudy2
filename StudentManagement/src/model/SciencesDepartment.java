@@ -39,6 +39,14 @@ public class SciencesDepartment extends Student {
     public void setPhysicsPoint(double physicsPoint) {
         this.physicsPoint = physicsPoint;
     }
+    @Override
+    public String toString() {
+        return "SciencesStudent { " +super.toString()+
+                ", mathPoint=" + mathPoint +
+                ", chemistryPoint=" + chemistryPoint +
+                ", physicsPoint=" + physicsPoint +
+                '}';
+    }
 
     @Override
     public double averageOfSubject() {

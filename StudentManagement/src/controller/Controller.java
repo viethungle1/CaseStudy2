@@ -42,12 +42,18 @@ public class Controller {
         for (Student i : studentList) {
             System.out.println(i);
         }
+        readWriteFile.writeFile(studentList);
     }
-    public static void evaluate() {
+    public static void evaluateGifted() {
         StudentManager.achievementGiftedStudent();
+    }
+    public static void evaluateSciences() {
         StudentManager.achievementSciencesStudent();
+    }
+    public static void evaluateSocial() {
         StudentManager.achienvementSocialStudent();
     }
+
     public static int inputInt() {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();

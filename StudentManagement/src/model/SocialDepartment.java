@@ -32,6 +32,14 @@ public class SocialDepartment extends Student {
         this.geographyPoint = geographyPoint;
     }
     @Override
+    public String toString() {
+        return "SocialStudent { " +super.toString()+
+                ", literaturePoint=" + literaturePoint +
+                ", historyPoint=" + historyPoint +
+                ", geographyPoint=" + geographyPoint +
+                '}';
+    }
+    @Override
     public double averageOfSubject() {
         double averagePoint;
         averagePoint = this.literaturePoint + this.geographyPoint+this.historyPoint;
