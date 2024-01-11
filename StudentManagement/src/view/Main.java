@@ -1,9 +1,7 @@
 package view;
-
 import controller.Controller;
 import mananger.StudentManager;
 import model.Student;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
@@ -19,7 +17,7 @@ public class Main {
             System.out.println("3. Sửa thông tin sinh viên");
             System.out.println("4. Xóa sinh viên khỏi danh sách");
             System.out.println("5. Kết quả học tập của sinh viên");
-            System.out.println("6. Sắp xếp sinh viên theo tuổi");
+            System.out.println("6. Sắp xếp sinh viên");
             System.out.println("0. Exit");
             System.out.print("=> Enter a number: ");
             choice = scanner.nextInt();

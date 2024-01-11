@@ -98,7 +98,6 @@ public class StudentManager {
                 System.out.println("2. Tên");
                 System.out.println("3. Tuổi");
                 System.out.println("4. Giới tính");
-                System.out.println("5. Exit");
                 int select = inputInt();
                 switch (select) {
                     case 1:
@@ -121,8 +120,6 @@ public class StudentManager {
                         String newSex = inputString();
                         i.setSex(newSex);
                         break;
-                    case 5:
-                        System.exit(0);
                 }
             } else {
                 System.out.println("Sinh viên không tồn tại");
@@ -134,106 +131,94 @@ public class StudentManager {
         for (Student i : Controller.studentList) {
             if (i.getId().equals(id)) {
                 if (i.getMajor().equals(GIFTED)) {
-                    int choice = -1;
-                    while (choice != 0) {
-                        System.out.println("Nhập điểm cần sửa");
-                        System.out.println("1. Điểm hội họa");
-                        System.out.println("2. Điểm điêu khắc");
-                        System.out.println("3. Điểm tạo hình");
-                        System.out.println("4. Thoát");
-                        int select = inputInt();
-                        switch (select) {
-                            case 1:
-                                GiftedDepartment g = (GiftedDepartment) i;
-                                System.out.println("Nhập điểm hội họa cần sửa");
-                                double newPoint1 = inputDouble();
-                                g.setArtPoint(newPoint1);
-                                break;
-                            case 2:
-                                GiftedDepartment h = (GiftedDepartment) i;
-                                System.out.println("Nhập điểm điêu khắc cần sửa");
-                                double newPoint2 = inputDouble();
-                                h.setSculpturePoint(newPoint2);
-                                break;
-                            case 3:
-                                GiftedDepartment j = (GiftedDepartment) i;
-                                System.out.println("Nhập điểm điêu khắc cần sửa");
-                                double newPoint3 = inputDouble();
-                                j.setShapingPoint(newPoint3);
-                                break;
-                            case 4:
-                                System.exit(0);
-                        }
+                    System.out.println("Nhập điểm cần sửa");
+                    System.out.println("1. Điểm hội họa");
+                    System.out.println("2. Điểm điêu khắc");
+                    System.out.println("3. Điểm tạo hình");
+                    System.out.println("4. Thoát");
+                    int select = inputInt();
+                    switch (select) {
+                        case 1:
+                            GiftedDepartment g = (GiftedDepartment) i;
+                            System.out.println("Nhập điểm hội họa cần sửa");
+                            double newPoint1 = inputDouble();
+                            g.setArtPoint(newPoint1);
+                            break;
+                        case 2:
+                            GiftedDepartment h = (GiftedDepartment) i;
+                            System.out.println("Nhập điểm điêu khắc cần sửa");
+                            double newPoint2 = inputDouble();
+                            h.setSculpturePoint(newPoint2);
+                            break;
+                        case 3:
+                            GiftedDepartment j = (GiftedDepartment) i;
+                            System.out.println("Nhập điểm điêu khắc cần sửa");
+                            double newPoint3 = inputDouble();
+                            j.setShapingPoint(newPoint3);
+                            break;
                     }
-                } else if (i.getMajor().equals("Sciences")) {
-                    int choice = -1;
-                    while (choice != 0) {
-                        System.out.println("Nhập điểm cần sửa");
-                        System.out.println("1. Điểm toán");
-                        System.out.println("2. Điểm hóa học");
-                        System.out.println("3. Điểm vật lý");
-                        System.out.println("4. Thoát");
-                        int select = inputInt();
-                        switch (select) {
-                            case 1:
-                                SciencesDepartment g = (SciencesDepartment) i;
-                                System.out.println("Nhập điểm hội họa cần sửa");
-                                double newPoint1 = inputDouble();
-                                g.setMathPoint(newPoint1);
-                                break;
-                            case 2:
-                                SciencesDepartment h = (SciencesDepartment) i;
-                                System.out.println("Nhập điểm hóa học cần sửa");
-                                double newPoint2 = inputDouble();
-                                h.setChemistryPoint(newPoint2);
-                                break;
-                            case 3:
-                                SciencesDepartment j = (SciencesDepartment) i;
-                                System.out.println("Nhập điểm vật lý cần sửa");
-                                double newPoint3 = inputDouble();
-                                j.setPhysicsPoint(newPoint3);
-                                break;
-                            case 4:
-                                System.exit(0);
-                        }
-                    }
-                } else if (i.getMajor().equals(SCIENCES)) {
-                    int choice = -1;
-                    while (choice != 0) {
-                        System.out.println("Nhập điểm cần sửa");
-                        System.out.println("1. Điểm văn");
-                        System.out.println("2. Điểm lịch sử");
-                        System.out.println("3. Điểm địa lý");
-                        System.out.println("4. Thoát");
-                        int select = inputInt();
-                        switch (select) {
-                            case 1:
-                                SocialDepartment g = (SocialDepartment) i;
-                                System.out.println("Nhập điểm văn cần sửa");
-                                double newPoint1 = inputDouble();
-                                g.setLiteraturePoint(newPoint1);
-                                break;
-                            case 2:
-                                SocialDepartment h = (SocialDepartment) i;
-                                System.out.println("Nhập điểm lịch sử cần sửa");
-                                double newPoint2 = inputDouble();
-                                h.setHistoryPoint(newPoint2);
-                                break;
-                            case 3:
-                                SocialDepartment j = (SocialDepartment) i;
-                                System.out.println("Nhập điểm địa lý cần sửa");
-                                double newPoint3 = inputDouble();
-                                j.setGeographyPoint(newPoint3);
-                                break;
-                            case 4:
-                                System.exit(0);
-                        }
-                    }
+                }
+            } else if (i.getMajor().equals(SCIENCES)) {
+                System.out.println("Nhập điểm cần sửa");
+                System.out.println("1. Điểm toán");
+                System.out.println("2. Điểm hóa học");
+                System.out.println("3. Điểm vật lý");
+                System.out.println("4. Thoát");
+                int select = inputInt();
+                switch (select) {
+                    case 1:
+                        SciencesDepartment g = (SciencesDepartment) i;
+                        System.out.println("Nhập điểm hội họa cần sửa");
+                        double newPoint1 = inputDouble();
+                        g.setMathPoint(newPoint1);
+                        break;
+                    case 2:
+                        SciencesDepartment h = (SciencesDepartment) i;
+                        System.out.println("Nhập điểm hóa học cần sửa");
+                        double newPoint2 = inputDouble();
+                        h.setChemistryPoint(newPoint2);
+                        break;
+                    case 3:
+                        SciencesDepartment j = (SciencesDepartment) i;
+                        System.out.println("Nhập điểm vật lý cần sửa");
+                        double newPoint3 = inputDouble();
+                        j.setPhysicsPoint(newPoint3);
+                        break;
+                    case 4:
+                        System.exit(0);
+                }
+            } else if (i.getMajor().equals(SOCIAL)) {
+                System.out.println("Nhập điểm cần sửa");
+                System.out.println("1. Điểm văn");
+                System.out.println("2. Điểm lịch sử");
+                System.out.println("3. Điểm địa lý");
+                System.out.println("4. Thoát");
+                int select = inputInt();
+                switch (select) {
+                    case 1:
+                        SocialDepartment g = (SocialDepartment) i;
+                        System.out.println("Nhập điểm văn cần sửa");
+                        double newPoint1 = inputDouble();
+                        g.setLiteraturePoint(newPoint1);
+                        break;
+                    case 2:
+                        SocialDepartment h = (SocialDepartment) i;
+                        System.out.println("Nhập điểm lịch sử cần sửa");
+                        double newPoint2 = inputDouble();
+                        h.setHistoryPoint(newPoint2);
+                        break;
+                    case 3:
+                        SocialDepartment j = (SocialDepartment) i;
+                        System.out.println("Nhập điểm địa lý cần sửa");
+                        double newPoint3 = inputDouble();
+                        j.setGeographyPoint(newPoint3);
+                        break;
+                    case 4:
+                        System.exit(0);
                 }
             }
         }
     }
-
     public static void achievementGiftedStudent() {
         for (Student i : Controller.studentList) {
             if (i.getMajor().equals(GIFTED)) {

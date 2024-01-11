@@ -7,6 +7,11 @@ public class GiftedDepartment extends Student {
     private double shapingPoint;
     public GiftedDepartment() {
     }
+
+    public GiftedDepartment(String id, String name, int age, String sex, String major) {
+        super(id, name, age, sex, major);
+    }
+
     public GiftedDepartment(String id, String name, int age, String sex, String major, double artPoint, double sculpturePoint, double shapingPoint) {
         super(id, name, age, sex, major);
         this.artPoint = artPoint;
