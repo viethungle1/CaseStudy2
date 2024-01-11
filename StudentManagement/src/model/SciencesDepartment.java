@@ -47,7 +47,4 @@ public class SciencesDepartment extends Student {
         return averagePoint/ NUMBEROFSUBJECT;
 
     }
-    @Override
-    public void conduct() {
-    }
 }

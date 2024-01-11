@@ -37,7 +37,4 @@ public class SocialDepartment extends Student {
         averagePoint = this.literaturePoint + this.geographyPoint+this.historyPoint;
         return averagePoint/ NUMBEROFSUBJECT;
     }
-    @Override
-    public void conduct() {
-    }
 }

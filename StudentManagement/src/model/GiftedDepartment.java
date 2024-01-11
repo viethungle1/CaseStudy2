@@ -47,8 +47,4 @@ public class GiftedDepartment extends Student {
         averagePoint = this.artPoint + this.sculpturePoint + this.shapingPoint;
         return averagePoint/ NUMBEROFSUBJECT;
     }
-    @Override
-    public void conduct() {
-    }
-
 }
